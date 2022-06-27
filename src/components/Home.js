@@ -182,7 +182,7 @@ function Home() {
                 <div class="option_container">
                   <div class="options">
                     <a href="" class="option1">
-                      Men's Shirt
+                      Add To Cart
                     </a>
                     <a href="" class="option2">
                       Buy Now
@@ -592,7 +592,7 @@ function Home() {
                     <h3>Newsletter</h3>
                     <div class="information_f">
                       <p>
-                        Subscribe by our newsletter and get update protidin.
+                        Subscribe by our newsletter and get updates everyday.
                       </p>
                     </div>
                     <div class="form_sub">
