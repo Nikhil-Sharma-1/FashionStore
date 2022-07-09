@@ -9,14 +9,14 @@ function Header() {
   return (
     <>
         {/* header section strats  */}
-        <header class="header_section">
-          <div class="container">
-            <nav class="navbar navbar-expand-lg custom_nav-container ">
-              <a class="navbar-brand" href="" onClick={()=>history.push('/home')}>
+        <header className="header_section">
+          <div className="container">
+            <nav className="navbar navbar-expand-lg custom_nav-container ">
+              <a className="navbar-brand" href="" onClick={()=>history.push('/home')}>
                 <img src="images/logooo.png" style={{width: '120px',objectFit: 'contain',height: '64px'}} alt="#" />
               </a>
               <button
-                class="navbar-toggler"
+                className="navbar-toggler"
                 type="button"
                 data-toggle="collapse"
                 data-target="#navbarSupportedContent"
@@ -24,18 +24,18 @@ function Header() {
                 aria-expanded="false"
                 aria-label="Toggle navigation"
               >
-                <span class=""> </span>
+                <span className=""> </span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
+              <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul className="navbar-nav">
                   <li className={location.pathname === '/home' ? "nav-item active" : "nav-item"}>
-                    <a href="" class="nav-link" onClick={()=>history.push('/home')}>
-                      Home <span class="sr-only">(current)</span>
+                    <a href="" className="nav-link" onClick={()=>history.push('/home')}>
+                      Home <span className="sr-only">(current)</span>
                     </a>
                   </li>
-                  <li class="nav-item dropdown">
+                  <li className="nav-item dropdown">
                     <a
-                      class="nav-link dropdown-toggle"
+                      className="nav-link dropdown-toggle"
                       href="#"
                       data-toggle="dropdown"
                       role="button"
@@ -43,11 +43,11 @@ function Header() {
                       aria-expanded="true"
                     >
                       {" "}
-                      <span class="nav-label">
-                        Pages <span class="caret"></span>
+                      <span className="nav-label">
+                        Pages <span className="caret"></span>
                       </span>
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul className="dropdown-menu">
                       <li>
                       <a href="" onClick={()=>history.push('/about')}>About</a>
                       </li>
@@ -57,7 +57,7 @@ function Header() {
                     </ul>
                   </li>
                   <li className={location.pathname === '/products' ? "nav-item active" : "nav-item"}>
-                    <a href="" onClick={()=>history.push('/products')} class="nav-link" >
+                    <a href="" onClick={()=>history.push('/products')} className="nav-link" >
                       Products
                     </a>
                   </li>
@@ -67,7 +67,7 @@ function Header() {
                     </a>
                   </li>
                   <li className={location.pathname === '/contact' ? "nav-item active" : "nav-item"}>
-                    <a href="" onClick={()=>history.push('/contact')} class="nav-link">
+                    <a href="" onClick={()=>history.push('/contact')} className="nav-link">
                       Contact
                     </a>
                   </li>

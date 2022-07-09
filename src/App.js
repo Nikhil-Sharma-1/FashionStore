@@ -3,9 +3,9 @@ import {Switch, Route,BrowserRouter as Router,Redirect } from 'react-router-dom'
 // import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from './components/Home';
 import About from './components/About'; 
-import Testimonial from './components/Testimonial'; 
-import Products from './components/Products'; 
-import Blog from './components/Blog'; 
+import Testimonial from './components/testimonial/Testimonial'; 
+import Products from './components/product/Products'; 
+import Blog from './components/blog/Blog'; 
 import Contact from './components/Contact'; 
 function App() {
   return (
