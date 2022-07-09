@@ -7,7 +7,7 @@ import Header from "./Header";
 
 function Contact() {
   const form = { useRef };
-  const notify = () => toast.success("Form Submitted Successfully");
+  var notify = () => toast.success("Form Submitted Successfully");
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -55,24 +55,28 @@ function Contact() {
                   <form ref={form} onSubmit={sendEmail}>
                     <fieldset>
                       <input
+                        id="tex"
                         type="text"
                         placeholder="Enter your full name"
                         name="user_name"
                         required
                       />
                       <input
+                      id="mail"
                         type="email"
                         placeholder="Enter your email address"
                         name="user_email"
                         required
                       />
                       <input
+                        id="tex2"
                         type="text"
                         placeholder="Enter subject"
                         name="user_subject"
                         required
                       />
                       <textarea
+                        id="mes"
                         placeholder="Enter your message"
                         name="user_message"
                         required
@@ -104,4 +108,5 @@ function Contact() {
     </>
   );
 }
+
 export default Contact;

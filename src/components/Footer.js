@@ -26,10 +26,10 @@ function Footer() {
                         Call +91 987 654 3210
                         </span>
                         </a>
-                        <a href="mailto:sharmanikhil67696@gmail.com">
+                        <a href="mailto:fashionstoresince1998@gmail.com">
                         <i className="fa fa-envelope" aria-hidden="true"></i>
                         <span>
-                        sharmanikhil67696@gmail.com
+                        fashionstoresince1998@gmail.com
                         </span>
                         </a>
                      </div>
