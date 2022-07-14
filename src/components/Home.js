@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useHistory } from "react-router";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
@@ -13,7 +13,11 @@ import TestimonialSection from "./testimonial/TestimonialSection";
 function Home() {
   const history = useHistory();
   const form = { useRef };
-  const notify = () => toast.success("Subscription Availed Successfully");
+
+  const success = () => toast.success("Subscription Availed Successfully");
+  const error = () => toast.error("Please Fill The Required Details");
+  const [isToast, setIsToast] = useState(false); //For deciding which toast should be visible
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -124,12 +128,13 @@ function Home() {
                   </p>
                   <form ref={form} onSubmit={sendEmail}>
                     <input
+                      onChange= {handleChange}
                       type="email"
                       placeholder="Enter your email"
                       name="email"
                       required
                     />
-                    <button onClick={notify}>subscribe</button>
+                    <button onClick={isToast ? success : error}>subscribe</button>
                     <ToastContainer
                       position="top-right"
                       autoClose={5000}
@@ -159,5 +164,14 @@ function Home() {
       {/* footer end  */}
     </>
   );
+
+  function handleChange(event) { //Decides which toast should be visible
+      if(event.target.value != "") {
+        setIsToast(true);
+      } else {
+        setIsToast(false);
+      }
+  }
+
 }
 export default Home;

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -7,7 +7,11 @@ import Header from "./Header";
 
 function Contact() {
   const form = { useRef };
-  var notify = () => toast.success("Form Submitted Successfully");
+  
+  const success = () => toast.success("Subscription Availed Successfully");
+  const error = () => toast.error("Please Fill The Required Details");
+  const [isToast, setIsToast] = useState(false); //For deciding which toast should be visible
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -76,12 +80,13 @@ function Contact() {
                         required
                       />
                       <textarea
+                      onChange= {handleChange}
                         id="mes"
                         placeholder="Enter your message"
                         name="user_message"
                         required
                       ></textarea>
-                      <input type="submit" onClick={notify} value="Submit" />
+                      <input type="submit" onClick={isToast ? success : error} value="Submit" />
                       <ToastContainer
                         position="top-right"
                         autoClose={5000}
@@ -107,6 +112,14 @@ function Contact() {
       </div>
     </>
   );
+
+  function handleChange(event) { //Decides which toast should be visible
+    if(event.target.value != "") {
+      setIsToast(true);
+    } else {
+      setIsToast(false);
+    }
+}
 }
 
 export default Contact;
