@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import BlogSection from "./blog/BlogSection";
+import Arrival from "./Arrival";
 
 function About() {
   return (
@@ -23,9 +24,15 @@ function About() {
          </div>
       </section>
       {/* <!-- end inner page section --> */}
+      
       {/* <!-- why section --> */}
       <BlogSection />
       {/* <!-- end why section --> */}
+
+      {/* arrival section --> */}
+      <Arrival />
+      {/* end arrival section  */}
+
       <Footer/>
     </div>
     </>

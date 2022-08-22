@@ -1,7 +1,7 @@
 import React from "react";
-import {Link} from 'react-router-dom';
 
 function Footer() {
+   const year = new Date().getFullYear();
   return (
     <>
         {/* <!-- footer section --> */}
@@ -71,7 +71,7 @@ function Footer() {
             <div className="footer-info">
                <div className="col-lg-7 mx-auto px-0">
                   <p>
-                     &copy; <span id="displayYear"></span> All Rights Reserved
+                      <span id="displayYear"></span> Copyright &copy; {year} | Build With❤️
                   </p>
                </div>
             </div>

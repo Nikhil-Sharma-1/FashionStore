@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import { useHistory } from "react-router";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -9,9 +8,9 @@ import Footer from "./Footer";
 import ProductSection from "./product/ProductSection";
 import SliderSection from "./SliderSection";
 import TestimonialSection from "./testimonial/TestimonialSection";
+import Arrival from "./Arrival";
 
 function Home() {
-  const history = useHistory();
   const form = { useRef };
 
   const success = () => toast.success("Subscription Availed Successfully");
@@ -75,37 +74,15 @@ function Home() {
             </div>
           </div>
         </section>
+        </div>
         {/* end slider section  */}
-      </div>
+        
       {/* why section  */}
       <BlogSection />
       {/* end why section  */}
 
       {/* arrival section --> */}
-      <section className="arrival_section">
-        <div className="container">
-          <div className="box">
-            <div className="arrival_bg_box">
-              <img src={"images/arrival-bg.png"} alt="" />
-            </div>
-            <div className="row">
-              <div className="col-md-6 ml-auto">
-                <div className="heading_container remove_line_bt">
-                  <h2>#NewArrivals</h2>
-                </div>
-                <p style={{ marginTop: "20px", marginBottom: "30px" }}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus magna nulla, efficitur a lacus in, rhoncus placerat
-                  enim. Nullam mollis viverra ante, non varius quam auctor sed!
-                </p>
-                <a href="" onClick={() => history.push("/products")}>
-                  Shop Now
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Arrival />
       {/* end arrival section  */}
 
       {/* product section --> */}
@@ -159,6 +136,7 @@ function Home() {
       {/* <!-- client section --> */}
       <TestimonialSection />
       {/* <!-- end client section --> */}
+
       {/* <!-- footer start --> */}
       <Footer />
       {/* footer end  */}
@@ -166,7 +144,7 @@ function Home() {
   );
 
   function handleChange(event) { //Decides which toast should be visible
-      if(event.target.value != "") {
+      if(event.target.value !== "") {
         setIsToast(true);
       } else {
         setIsToast(false);
