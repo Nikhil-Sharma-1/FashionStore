@@ -1,5 +1,4 @@
 import React from "react";
-// import {Link} from 'react-router-dom';
 import { useHistory } from "react-router";
 import { useLocation } from 'react-router-dom';
 
@@ -8,7 +7,7 @@ function Header() {
   const location = useLocation();
   return (
     <>
-        {/* header section strats  */}
+        {/* header section starts  */}
         <header className="header_section">
           <div className="container">
             <nav className="navbar navbar-expand-lg custom_nav-container ">
